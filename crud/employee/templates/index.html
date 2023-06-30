@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body class="main">
+    <form method="POST" action="/">
+        {% csrf_token %}
+        <div >
+            <br>
+            
+            <div class="horizontal">
+                    <h2 class="vertical2">STUDENT MANAGEMENT SYSTEM</h3>
+                    <h3 class="vertical2">Enter student details</h3>
+                <div class="vertical">
+                <div class="container2"><h4>Student Id :</h4>{{ form.eid }}</div>
+                <div class="container2"><h4>Student Name :</h4>{{ form.ename }}</div></div>
+            
+                <div class="vertical">
+                    <div class="container2"><h4>Student Email :</h4>{{ form.eemail }}</div>
+                    <div class="container2"><h4>Student contact :</h4>{{ form.econtact }}</div>
+            </div>   
+            <div class="btn">
+                <br>
+                
+               <button  type="submit">Submit</button></div>
+            </div>
+
+        </div>
+
+        </div>
+    </form>
+</body>
+
+</html>
